@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "database":"docker compose up",
     "dev": "nodemon ./src/index.ts",
     "test": ""
   },
