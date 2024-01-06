@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  mysqldb:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_DATABASE=prueba
+      - MYSQL_ROOT_PASSWORD=123456789
+    volumes:
+      - db-prueba:/var/lib/mysql
+volumes:
+  db-prueba:
