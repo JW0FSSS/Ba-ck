@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "database":"docker compose up",
-    "dev": "nodemon ./src/index.ts",
-    "test": ""
+    "test": "set NODE_OPTIONS=--experimental-vm-modules && jest",
+    "database": "docker compose up",
+    "dev": "nodemon ./src/app.ts"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +18,9 @@
   "devDependencies": {
     "@prisma/client": "5.7.1",
     "@types/express": "4.17.21",
+    "@types/jest": "^29.5.11",
     "@types/node": "20.10.6",
+    "jest": "^29.7.0",
     "nodemon": "3.0.2",
     "prisma": "5.7.1",
     "ts-node": "10.9.2",
